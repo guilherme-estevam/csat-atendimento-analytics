@@ -1,5 +1,9 @@
 # 📁 Dados Processados — CSAT
 
+> 🔖 **Status atual:** V2 do projeto  
+> Esta versão inclui análises de CSAT segmentadas por **faixa de tempo de atendimento**, avaliando o impacto da duração no nível de satisfação.  
+> Novas versões (V3+) incluirão análises adicionais, novas dimensões e refinamentos no processamento.
+
 Esta pasta contém os **dados processados e consolidados** do projeto de análise de CSAT, derivados da base bruta localizada em `data/raw`.
 
 Os arquivos aqui armazenados representam diferentes **versões do processamento e das análises**, evoluindo conforme novas métricas, dimensões e automações são adicionadas ao projeto.
@@ -11,16 +15,19 @@ Os arquivos aqui armazenados representam diferentes **versões do processamento 
 Os arquivos de dados processados seguem um padrão de organização por abas, contemplando as principais etapas do fluxo analítico:
 
 - **raw_csat**  
-  Cópia da base bruta utilizada como referência interna, garantindo rastreabilidade dos dados.
+  Cópia da base bruta utilizada como referência interna, garantindo rastreabilidade dos dados ao longo do processo.
 
 - **processed_csat**  
-  Base tratada, com padronização de dados e criação de colunas analíticas.
+  Base tratada, com padronização de datas, criação de colunas analíticas e preparação para análises.
 
 - **csat_por_canal**  
-  Análises segmentadas por canal de atendimento.
+  Análise de CSAT segmentada por canal de atendimento.
 
 - **metrics**  
-  Consolidação dos principais indicadores operacionais e de satisfação.
+  Consolidação dos principais indicadores de satisfação e volume de atendimentos.
+
+- **Análises por Faixa de Tempo**  
+  Segmentação dos atendimentos por duração, permitindo avaliar a relação entre tempo de atendimento e CSAT.
 
 ---
 
@@ -30,12 +37,22 @@ Cada arquivo representa uma **versão do processamento**, podendo evoluir com:
 
 - Inclusão de novas métricas
 - Novas segmentações e análises
-- Melhorias no tratamento dos dados
+- Melhorias no tratamento e organização dos dados
 - Automatização do fluxo de atualização
 
 As versões são identificadas:
-- no nome do arquivo, quando aplicável
-- ou na documentação do projeto (README principal)
+- no **nome do arquivo** (ex: `csat_analysis_v2.xlsx`)
+- e/ou documentadas no **histórico de versões** abaixo
+
+---
+
+## 🧩 Histórico de Versões
+
+- **V2**  
+  Inclusão da análise de CSAT por **faixa de tempo de atendimento**, avaliando se atendimentos mais longos impactam a satisfação do cliente.
+
+- **V1**  
+  Estrutura inicial do projeto, organização da base processada e consolidação das métricas principais de CSAT.
 
 ---
 
@@ -43,7 +60,7 @@ As versões são identificadas:
 
 - Os dados presentes nesta pasta **não devem ser tratados como dados brutos**
 - Qualquer nova transformação deve partir da base localizada em `data/raw`
-- O objetivo desta pasta é fornecer bases analíticas confiáveis para análise e visualização
+- O objetivo desta pasta é fornecer bases analíticas confiáveis para análise, exploração e visualização
 
 ---
 
